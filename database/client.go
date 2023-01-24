@@ -15,7 +15,7 @@ func DbConnection(connectionString string) {
 	db, err := gorm.Open(mysql.Open(connectionString), &gorm.Config{})
 	if err != nil {
 		log.Fatal(err)
-		log.Println("Error in connecting to database....")
+		panic("Error in connecting to database....")
 	}
 
 	db.AutoMigrate(&models.Product{})
