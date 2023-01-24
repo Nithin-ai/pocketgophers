@@ -11,7 +11,7 @@ type Config struct {
 	ConnectionString string `mapstructure:"connection_string"`
 }
 
-var appConfig *Config
+var AppConfig *Config
 
 func LoadConfig() {
 	log.Println("Loading Configurations....")
@@ -23,7 +23,7 @@ func LoadConfig() {
 		log.Fatal(err)
 	}
 
-	err = viper.Unmarshal(&appConfig)
+	err = viper.Unmarshal(&AppConfig)
 	if err != nil {
 		log.Fatal(err)
 	}

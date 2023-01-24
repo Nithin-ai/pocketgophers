@@ -8,7 +8,7 @@ import (
 	"gorm.io/gorm"
 )
 
-var DB *gorm.DB
+var Db *gorm.DB
 var err error
 
 func DbConnection(connectionString string) {
